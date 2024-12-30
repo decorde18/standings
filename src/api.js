@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3306'; // Replace with your backend URL after deployment.
+// const API_URL = 'http://localhost:3306'; // Replace with your backend URL after deployment.
+const API_URL = 'https://standings-backend.onrender.com'; // Replace with your backend URL after deployment.
 
 export const getTeams = async () => {
   try {
