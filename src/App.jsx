@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { getTeams } from "./api";
+import { useEffect, useState } from 'react';
+import { getTeams } from './api';
 
 function App() {
   const [teams, setTeams] = useState([]);
@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     getTeams().then(setTeams);
   }, []);
-
+  console.log(teams);
   return (
     <div>
       <h1>Soccer Teams</h1>
