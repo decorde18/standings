@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getTeams } from './api';
+import LandingPage from './components/LandingPage';
 
 function App() {
   const [teams, setTeams] = useState([]);
@@ -7,19 +8,8 @@ function App() {
   useEffect(() => {
     getTeams().then(setTeams);
   }, []);
-  console.log(teams);
-  return (
-    <div>
-      <h1>Soccer Teams</h1>
-      <ul>
-        {teams.map((team) => (
-          <li key={team.id}>
-            {team.Name} - {team.Team}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+
+  return <LandingPage />;
 }
 
 export default App;
